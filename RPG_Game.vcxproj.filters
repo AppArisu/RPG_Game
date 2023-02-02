@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sauce">
+      <UniqueIdentifier>{de4f9621-f26b-48b7-a1e6-cb1158005369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Game">
+      <UniqueIdentifier>{6c1c0a6b-884a-440b-987f-fbf7c230ee1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic">
+      <UniqueIdentifier>{4a8f21f9-8fff-450b-b9e3-482e3c0c8200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\System">
+      <UniqueIdentifier>{8cae9f30-ae7c-40e1-850d-0f22447663e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL">
+      <UniqueIdentifier>{0bdf888b-22ad-4ac9-a0cd-ec33794d5a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{235dab10-17f9-4f19-ba41-a3a13c0b8232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\ImGui">
+      <UniqueIdentifier>{d6653b9a-f320-4609-b5ac-0b38e08fb48f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\DirectXTex">
+      <UniqueIdentifier>{83d8dec3-67be-4904-83ee-be1f252e3e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL\ImGui">
+      <UniqueIdentifier>{7118eb90-b98f-47ce-9301-238214b60c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL\Mask">
+      <UniqueIdentifier>{f1d7cd4e-dde9-41ce-9d81-b06f418f7b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL\UVScroll">
+      <UniqueIdentifier>{8120ed38-c977-4d06-b1f6-94167a380d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSL\Sprite">
+      <UniqueIdentifier>{17b48be6-9c42-4064-bb53-b9b212e13017}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sauce\Mian.cpp">
+      <Filter>Sauce\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Framework.cpp">
+      <Filter>Sauce\System</Filter>
+    </ClCompile>
+    <ClCompile Include="External\imgui\imgui.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\imgui\imgui_demo.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\imgui\imgui_draw.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\imgui\imgui_widgets.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\DirectXTex\WICTextureLoader.cpp">
+      <Filter>External\DirectXTex</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sauce\Framework.h">
+      <Filter>Sauce\System</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imconfig.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imgui.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imgui_internal.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imstb_rectpack.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imstb_textedit.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\imgui\imstb_truetype.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\DirectXTex\WICTextureLoader.h">
+      <Filter>External\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Misc.h">
+      <Filter>Sauce\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\HighResolutionTimer.h">
+      <Filter>Sauce\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
