@@ -2,6 +2,8 @@
 #include <sstream>
 
 #include "Framework.h"
+#include "Scene_Manager.h"
+#include "Scene_Sample.h"
 
 // 垂直同期間隔設定
 static const int syncInterval = 1;
@@ -11,16 +13,22 @@ Framework::Framework(HWND hWnd) :
     hWnd(hWnd),
     graphics(hWnd)
 {
+    // シーン初期化
+    SceneManager::Instance().ChangeScene(new SceneSample);
 }
 
 // デストラクタ
 Framework::~Framework()
 {
+    // シーン終了化
+    SceneManager::Instance().Clear();
 }
 
 // 更新処理
 void Framework::Update(float elapsedTime)
 {
+    // シーン更新処理
+    SceneManager::Instance().Update(elapsedTime);
 }
 
 // 描画処理
@@ -30,6 +38,9 @@ void Framework::Render(float elapsedTime)
 // 同時アクセスしないように排他制御する
     std::lock_guard<std::mutex> lock(graphics.GetMutex());
     ID3D11DeviceContext* dc = graphics.GetDeviceContext();
+
+    // シーン描画処理
+    SceneManager::Instance().Render();
 
     // バックバッファに描画した画を画面に表示する。
     graphics.GetSwapChain()->Present(syncInterval, 0);

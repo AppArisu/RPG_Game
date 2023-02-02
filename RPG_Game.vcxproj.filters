@@ -66,6 +66,15 @@
     <ClCompile Include="Sauce\Graphic\Graphics.cpp">
       <Filter>Sauce\Graphic</Filter>
     </ClCompile>
+    <ClCompile Include="Sauce\Scene_Loading.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Manager.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Sample.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sauce\Framework.h">
@@ -100,6 +109,18 @@
     </ClInclude>
     <ClInclude Include="Sauce\Graphic\Graphics.h">
       <Filter>Sauce\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Loading.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Manager.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Sample.h">
+      <Filter>Sauce\Game\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

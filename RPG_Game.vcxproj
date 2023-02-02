@@ -141,6 +141,9 @@
     <ClCompile Include="Sauce\Framework.cpp" />
     <ClCompile Include="Sauce\Graphic\Graphics.cpp" />
     <ClCompile Include="Sauce\Mian.cpp" />
+    <ClCompile Include="Sauce\Scene_Loading.cpp" />
+    <ClCompile Include="Sauce\Scene_Manager.cpp" />
+    <ClCompile Include="Sauce\Scene_Sample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External\DirectXTex\WICTextureLoader.h" />
@@ -154,6 +157,10 @@
     <ClInclude Include="Sauce\Graphic\Graphics.h" />
     <ClInclude Include="Sauce\HighResolutionTimer.h" />
     <ClInclude Include="Sauce\Misc.h" />
+    <ClInclude Include="Sauce\Scene.h" />
+    <ClInclude Include="Sauce\Scene_Loading.h" />
+    <ClInclude Include="Sauce\Scene_Manager.h" />
+    <ClInclude Include="Sauce\Scene_Sample.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
