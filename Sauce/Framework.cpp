@@ -8,7 +8,8 @@ static const int syncInterval = 1;
 
 // コンストラクタ
 Framework::Framework(HWND hWnd) :
-    hWnd(hWnd)
+    hWnd(hWnd),
+    graphics(hWnd)
 {
 }
 
@@ -25,6 +26,13 @@ void Framework::Update(float elapsedTime)
 // 描画処理
 void Framework::Render(float elapsedTime)
 {
+    // 別スレッド中にデバイスコンテキストが使われていた場合に
+// 同時アクセスしないように排他制御する
+    std::lock_guard<std::mutex> lock(graphics.GetMutex());
+    ID3D11DeviceContext* dc = graphics.GetDeviceContext();
+
+    // バックバッファに描画した画を画面に表示する。
+    graphics.GetSwapChain()->Present(syncInterval, 0);
 }
 
 // フレームレート計算処理
@@ -81,7 +89,7 @@ int Framework::Run()
 // メッセージハンドラー
 LRESULT Framework::HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    //if (Graphic::Instance().GetImGuiRenderer()->HandleMessage(
+    //if (Graphics::Instance().GetImGuiRenderer()->HandleMessage(
     //    hWnd, msg, wParam, lParam))
     //    return true;
 

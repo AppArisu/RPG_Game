@@ -139,6 +139,7 @@
     <ClCompile Include="External\imgui\imgui_draw.cpp" />
     <ClCompile Include="External\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Sauce\Framework.cpp" />
+    <ClCompile Include="Sauce\Graphic\Graphics.cpp" />
     <ClCompile Include="Sauce\Mian.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="External\imgui\imstb_textedit.h" />
     <ClInclude Include="External\imgui\imstb_truetype.h" />
     <ClInclude Include="Sauce\Framework.h" />
+    <ClInclude Include="Sauce\Graphic\Graphics.h" />
     <ClInclude Include="Sauce\HighResolutionTimer.h" />
     <ClInclude Include="Sauce\Misc.h" />
   </ItemGroup>

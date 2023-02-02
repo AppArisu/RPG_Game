@@ -2,6 +2,7 @@
 #include<Windows.h>
 
 #include"HighResolutionTimer.h"
+#include"Graphic/Graphics.h"
 
 class Framework
 {
@@ -18,6 +19,7 @@ public:
 
     LRESULT CALLBACK HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 private:
-    const HWND hWnd;
+    const HWND                  hWnd;
     HighResolutionTimer		timer;
+    Graphics                        graphics;
 };
