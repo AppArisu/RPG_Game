@@ -37,6 +37,9 @@
     <Filter Include="HLSL\Sprite">
       <UniqueIdentifier>{17b48be6-9c42-4064-bb53-b9b212e13017}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sauce\Game\Scene">
+      <UniqueIdentifier>{7a98713d-8be1-4f96-8be1-0435dbabb216}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sauce\Mian.cpp">
