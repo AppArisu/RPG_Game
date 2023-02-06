@@ -13,9 +13,6 @@
     <Filter Include="Sauce\System">
       <UniqueIdentifier>{8cae9f30-ae7c-40e1-850d-0f22447663e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HLSL">
-      <UniqueIdentifier>{0bdf888b-22ad-4ac9-a0cd-ec33794d5a6c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="External">
       <UniqueIdentifier>{235dab10-17f9-4f19-ba41-a3a13c0b8232}</UniqueIdentifier>
     </Filter>
@@ -25,20 +22,38 @@
     <Filter Include="External\DirectXTex">
       <UniqueIdentifier>{83d8dec3-67be-4904-83ee-be1f252e3e45}</UniqueIdentifier>
     </Filter>
-    <Filter Include="HLSL\ImGui">
-      <UniqueIdentifier>{7118eb90-b98f-47ce-9301-238214b60c30}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="HLSL\Mask">
-      <UniqueIdentifier>{f1d7cd4e-dde9-41ce-9d81-b06f418f7b42}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="HLSL\UVScroll">
-      <UniqueIdentifier>{8120ed38-c977-4d06-b1f6-94167a380d15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="HLSL\Sprite">
-      <UniqueIdentifier>{17b48be6-9c42-4064-bb53-b9b212e13017}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Sauce\Game\Scene">
       <UniqueIdentifier>{7a98713d-8be1-4f96-8be1-0435dbabb216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Lua">
+      <UniqueIdentifier>{db610592-78d2-4c7c-9185-670375bcfd1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\Shader">
+      <UniqueIdentifier>{b2009a8a-08d3-4b85-8c1f-921d92f729a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\HLSL">
+      <UniqueIdentifier>{0bdf888b-22ad-4ac9-a0cd-ec33794d5a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\HLSL\ImGui">
+      <UniqueIdentifier>{7118eb90-b98f-47ce-9301-238214b60c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\HLSL\Mask">
+      <UniqueIdentifier>{f1d7cd4e-dde9-41ce-9d81-b06f418f7b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\HLSL\UVScroll">
+      <UniqueIdentifier>{8120ed38-c977-4d06-b1f6-94167a380d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Graphic\HLSL\Sprite">
+      <UniqueIdentifier>{17b48be6-9c42-4064-bb53-b9b212e13017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\System\Input">
+      <UniqueIdentifier>{aff2c87d-81e1-4534-89a4-21ea82c4ebe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Game\Character">
+      <UniqueIdentifier>{3f4e8880-c509-438d-8dd4-df19e5667679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\UI">
+      <UniqueIdentifier>{a42814a5-5652-47ac-b835-3b6afcc1eedc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +88,51 @@
       <Filter>Sauce\Game\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Sauce\Scene_Sample.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Title.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\Sprite.cpp">
+      <Filter>Sauce\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\Texture.cpp">
+      <Filter>Sauce\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\ImGuiRender.cpp">
+      <Filter>Sauce\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Logger.cpp">
+      <Filter>Sauce\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\Shader_Mask.cpp">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\Shader_Normal.cpp">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Graphic\Shader_UVScroll.cpp">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\GamePad.cpp">
+      <Filter>Sauce\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Input.cpp">
+      <Filter>Sauce\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Mouse.cpp">
+      <Filter>Sauce\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Battle.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Shop.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Dungeon.cpp">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Scene_Base.cpp">
       <Filter>Sauce\Game\Scene</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,5 +182,96 @@
     <ClInclude Include="Sauce\Scene_Sample.h">
       <Filter>Sauce\Game\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Sauce\Scene_Title.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Sprite.h">
+      <Filter>Sauce\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Texture.h">
+      <Filter>Sauce\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\ImGuiRender.h">
+      <Filter>Sauce\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\RenderContext.h">
+      <Filter>Sauce\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Logger.h">
+      <Filter>Sauce\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Shader.h">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Shader_Mask.h">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Shader_UVScroll.h">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Graphic\Shader_Normal.h">
+      <Filter>Sauce\Graphic\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\GamePad.h">
+      <Filter>Sauce\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Input.h">
+      <Filter>Sauce\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Mouse.h">
+      <Filter>Sauce\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Battle.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Shop.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Dungeon.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Scene_Base.h">
+      <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HLSL\Sprite.hlsli">
+      <Filter>Sauce\Graphic\HLSL\Sprite</Filter>
+    </None>
+    <None Include="HLSL\ImGui.hlsli">
+      <Filter>Sauce\Graphic\HLSL\ImGui</Filter>
+    </None>
+    <None Include="HLSL\Mask.hlsli">
+      <Filter>Sauce\Graphic\HLSL\Mask</Filter>
+    </None>
+    <None Include="HLSL\UVScroll.hlsli">
+      <Filter>Sauce\Graphic\HLSL\UVScroll</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="HLSL\Sprite_VS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Sprite_PS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ImGui_VS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\ImGui</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\ImGui_PS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\ImGui</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Mask_VS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\Mask</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\Mask_PS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\Mask</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\UVScroll_VS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\UVScroll</Filter>
+    </FxCompile>
+    <FxCompile Include="HLSL\UVScroll_PS.hlsl">
+      <Filter>Sauce\Graphic\HLSL\UVScroll</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

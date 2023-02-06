@@ -112,6 +112,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;winmm.lib;d2d1.lib;dwrite.lib;User32.lib;C:\3年後期\就職作品\RPG_Game\External\Lua\lua54.lib;C:\3年後期\就職作品\RPG_Game\External\SQLite\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <ObjectFileOutput>Shader\%(Filename).cso</ObjectFileOutput>
+      <AssemblerOutputFile>Shader\%(Filename).cod</AssemblerOutputFile>
+    </FxCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -131,6 +137,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;winmm.lib;d2d1.lib;dwrite.lib;User32.lib;C:\3年後期\就職作品\RPG_Game\External\Lua\lua54.lib;C:\3年後期\就職作品\RPG_Game\External\SQLite\sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <ObjectFileOutput>Shader\%(Filename).cso</ObjectFileOutput>
+      <AssemblerOutputFile>Shader\%(Filename).cod</AssemblerOutputFile>
+    </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="External\DirectXTex\WICTextureLoader.cpp" />
@@ -139,11 +151,26 @@
     <ClCompile Include="External\imgui\imgui_draw.cpp" />
     <ClCompile Include="External\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Sauce\Framework.cpp" />
+    <ClCompile Include="Sauce\GamePad.cpp" />
     <ClCompile Include="Sauce\Graphic\Graphics.cpp" />
+    <ClCompile Include="Sauce\Graphic\ImGuiRender.cpp" />
+    <ClCompile Include="Sauce\Graphic\Shader_Mask.cpp" />
+    <ClCompile Include="Sauce\Graphic\Shader_Normal.cpp" />
+    <ClCompile Include="Sauce\Graphic\Shader_UVScroll.cpp" />
+    <ClCompile Include="Sauce\Graphic\Sprite.cpp" />
+    <ClCompile Include="Sauce\Graphic\Texture.cpp" />
+    <ClCompile Include="Sauce\Input.cpp" />
+    <ClCompile Include="Sauce\Logger.cpp" />
     <ClCompile Include="Sauce\Mian.cpp" />
+    <ClCompile Include="Sauce\Mouse.cpp" />
+    <ClCompile Include="Sauce\Scene_Battle.cpp" />
+    <ClCompile Include="Sauce\Scene_Dungeon.cpp" />
     <ClCompile Include="Sauce\Scene_Loading.cpp" />
+    <ClCompile Include="Sauce\Scene_Base.cpp" />
     <ClCompile Include="Sauce\Scene_Manager.cpp" />
     <ClCompile Include="Sauce\Scene_Sample.cpp" />
+    <ClCompile Include="Sauce\Scene_Shop.cpp" />
+    <ClCompile Include="Sauce\Scene_Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External\DirectXTex\WICTextureLoader.h" />
@@ -154,13 +181,86 @@
     <ClInclude Include="External\imgui\imstb_textedit.h" />
     <ClInclude Include="External\imgui\imstb_truetype.h" />
     <ClInclude Include="Sauce\Framework.h" />
+    <ClInclude Include="Sauce\GamePad.h" />
     <ClInclude Include="Sauce\Graphic\Graphics.h" />
+    <ClInclude Include="Sauce\Graphic\ImGuiRender.h" />
+    <ClInclude Include="Sauce\Graphic\RenderContext.h" />
+    <ClInclude Include="Sauce\Graphic\Shader.h" />
+    <ClInclude Include="Sauce\Graphic\Shader_Mask.h" />
+    <ClInclude Include="Sauce\Graphic\Shader_Normal.h" />
+    <ClInclude Include="Sauce\Graphic\Shader_UVScroll.h" />
+    <ClInclude Include="Sauce\Graphic\Sprite.h" />
+    <ClInclude Include="Sauce\Graphic\Texture.h" />
     <ClInclude Include="Sauce\HighResolutionTimer.h" />
+    <ClInclude Include="Sauce\Input.h" />
+    <ClInclude Include="Sauce\Logger.h" />
     <ClInclude Include="Sauce\Misc.h" />
+    <ClInclude Include="Sauce\Mouse.h" />
     <ClInclude Include="Sauce\Scene.h" />
+    <ClInclude Include="Sauce\Scene_Battle.h" />
+    <ClInclude Include="Sauce\Scene_Dungeon.h" />
     <ClInclude Include="Sauce\Scene_Loading.h" />
+    <ClInclude Include="Sauce\Scene_Base.h" />
     <ClInclude Include="Sauce\Scene_Manager.h" />
     <ClInclude Include="Sauce\Scene_Sample.h" />
+    <ClInclude Include="Sauce\Scene_Shop.h" />
+    <ClInclude Include="Sauce\Scene_Title.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HLSL\ImGui.hlsli" />
+    <None Include="HLSL\Mask.hlsli" />
+    <None Include="HLSL\Sprite.hlsli" />
+    <None Include="HLSL\UVScroll.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="HLSL\ImGui_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\ImGui_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\Mask_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\Mask_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\Sprite_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\Sprite_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\UVScroll_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="HLSL\UVScroll_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

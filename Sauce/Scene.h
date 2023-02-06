@@ -1,5 +1,7 @@
 #pragma once
 #include<vector>
+#include "Graphic/Graphics.h"
+#include "Input.h"
 
 enum GameState
 {

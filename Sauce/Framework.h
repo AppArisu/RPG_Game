@@ -3,6 +3,7 @@
 
 #include"HighResolutionTimer.h"
 #include"Graphic/Graphics.h"
+#include"Input.h"
 
 class Framework
 {
@@ -22,4 +23,5 @@ private:
     const HWND                  hWnd;
     HighResolutionTimer		timer;
     Graphics                        graphics;
+    Input                             input;
 };

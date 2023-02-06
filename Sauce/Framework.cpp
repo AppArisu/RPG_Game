@@ -3,7 +3,7 @@
 
 #include "Framework.h"
 #include "Scene_Manager.h"
-#include "Scene_Sample.h"
+#include "Scene_Title.h"
 
 // 垂直同期間隔設定
 static const int syncInterval = 1;
@@ -11,10 +11,11 @@ static const int syncInterval = 1;
 // コンストラクタ
 Framework::Framework(HWND hWnd) :
     hWnd(hWnd),
-    graphics(hWnd)
+    graphics(hWnd),
+    input(hWnd)
 {
     // シーン初期化
-    SceneManager::Instance().ChangeScene(new SceneSample);
+    SceneManager::Instance().ChangeScene(new SceneTitle);
 }
 
 // デストラクタ
@@ -27,6 +28,8 @@ Framework::~Framework()
 // 更新処理
 void Framework::Update(float elapsedTime)
 {
+    // 入力処理 
+    input.Update();
     // シーン更新処理
     SceneManager::Instance().Update(elapsedTime);
 }
@@ -39,8 +42,14 @@ void Framework::Render(float elapsedTime)
     std::lock_guard<std::mutex> lock(graphics.GetMutex());
     ID3D11DeviceContext* dc = graphics.GetDeviceContext();
 
+    // IMGUIフレーム開始処理
+    graphics.GetImGuiRenderer()->NewFrame();
+
     // シーン描画処理
     SceneManager::Instance().Render();
+
+    // IMGUI描画
+    graphics.GetImGuiRenderer()->Render(dc);
 
     // バックバッファに描画した画を画面に表示する。
     graphics.GetSwapChain()->Present(syncInterval, 0);
@@ -100,9 +109,9 @@ int Framework::Run()
 // メッセージハンドラー
 LRESULT Framework::HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    //if (Graphics::Instance().GetImGuiRenderer()->HandleMessage(
-    //    hWnd, msg, wParam, lParam))
-    //    return true;
+    if (Graphics::Instance().GetImGuiRenderer()->HandleMessage(
+        hWnd, msg, wParam, lParam))
+        return true;
 
     switch (msg)
     {

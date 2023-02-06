@@ -1,0 +1,5 @@
+ID(int) Type(char) Name(char) Price(int) Comment(char)
+0 Armor かわのぼうし 50 よくわからないかわでつくられたぼうし
+1 Armor かわのよろい 150 よくわからないかわでつくられたよろい
+2 Armor てつのかぶと 200 とてもおもたいてつでつくられたかぶと
+3 Armor てつのよろい 450 とてもおもたいてつでつくられたよろい
