@@ -1,6 +1,7 @@
 #include "Scene_Battle.h"
 #include "Scene_Manager.h"
 #include "Scene_Loading.h"
+#include "Scene_Base.h"
 
 SceneBattle::SceneBattle()
 {
@@ -16,11 +17,25 @@ void SceneBattle::Finalize()
 
 void SceneBattle::Update(float elapsedTime)
 {
+    ProcessInput();
+
+    if (SceneChangeflg)
+    {
+        SceneChangeflg = true;
+    }
+}
+
+void SceneBattle::ProcessInput()
+{
     GamePad& gamePad = Input::Instance().GetGamePad();
 
     if (GetGameState() == GameState::Play)
     {
-
+        if (gamePad.GetButtonDown() & GamePad::BTN_A)
+        {
+            SceneChangeflg = true;
+            Change(new SceneBase);
+        }
     }
 }
 
@@ -32,7 +47,7 @@ void SceneBattle::Render()
     ID3D11DepthStencilView* dsv = graphics.GetDepthStencilView();
 
     // 画面クリア＆レンダーターゲット設定
-    FLOAT color[] = { 0.0f, 1.0f, 1.0f, 1.0f };	// RGBA(0.0～1.0)
+    FLOAT color[] = { 1.0f, 1.0f, 0.0f, 1.0f };	// RGBA(0.0～1.0)
     dc->ClearRenderTargetView(rtv, color);
     dc->ClearDepthStencilView(dsv, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
     dc->OMSetRenderTargets(1, &rtv, dsv);

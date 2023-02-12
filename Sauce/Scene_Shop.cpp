@@ -1,6 +1,7 @@
 #include "Scene_Shop.h"
 #include "Scene_Manager.h"
 #include "Scene_Loading.h"
+#include "Scene_Base.h"
 
 SceneShop::SceneShop()
 {
@@ -16,11 +17,24 @@ void SceneShop::Finalize()
 
 void SceneShop::Update(float elapsedTime)
 {
+    ProcessInput();
+
+    if (SceneChangeflg)
+    {
+        Change(new SceneBase);
+    }
+}
+
+void SceneShop::ProcessInput()
+{
     GamePad& gamePad = Input::Instance().GetGamePad();
 
     if (GetGameState() == GameState::Play)
     {
-
+        if (gamePad.GetButtonDown() & GamePad::BTN_A)
+        {
+            SceneChangeflg = true;
+        }
     }
 }
 

@@ -1,6 +1,7 @@
 #include "Scene_Title.h"
 #include "Scene_Manager.h"
 #include "Scene_Loading.h"
+#include "Scene_Base.h"
 
 // ‰Šú‰»
 void SceneTitle::Initialize()
@@ -108,6 +109,6 @@ void SceneTitle::Change(float elapsedTime)
     }
     else
     {
-        //SceneManager::Instance().ChangeScene(new SceneLoading(new SceneGame));
+        SceneManager::Instance().ChangeScene(new SceneLoading(new SceneBase));
     }
 }

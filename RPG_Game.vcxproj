@@ -171,6 +171,7 @@
     <ClCompile Include="Sauce\Scene_Sample.cpp" />
     <ClCompile Include="Sauce\Scene_Shop.cpp" />
     <ClCompile Include="Sauce\Scene_Title.cpp" />
+    <ClCompile Include="Sauce\UI_Pause.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External\DirectXTex\WICTextureLoader.h" />
@@ -205,6 +206,8 @@
     <ClInclude Include="Sauce\Scene_Sample.h" />
     <ClInclude Include="Sauce\Scene_Shop.h" />
     <ClInclude Include="Sauce\Scene_Title.h" />
+    <ClInclude Include="Sauce\UI.h" />
+    <ClInclude Include="Sauce\UI_Pause.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HLSL\ImGui.hlsli" />

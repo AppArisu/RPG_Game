@@ -11,11 +11,12 @@ public:
     void Finalize() override;
 
     void Update(float elapsedTime) override;
+    void ProcessInput() override;
 
     void Render() override;
     void RenderImGui() override;
 
     void Change(Scene* nextscene);
 private:
-
+    bool SceneChangeflg = false;
 };

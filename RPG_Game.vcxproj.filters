@@ -135,6 +135,9 @@
     <ClCompile Include="Sauce\Scene_Base.cpp">
       <Filter>Sauce\Game\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Sauce\UI_Pause.cpp">
+      <Filter>Sauce\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sauce\Framework.h">
@@ -232,6 +235,12 @@
     </ClInclude>
     <ClInclude Include="Sauce\Scene_Base.h">
       <Filter>Sauce\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\UI.h">
+      <Filter>Sauce\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\UI_Pause.h">
+      <Filter>Sauce\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
