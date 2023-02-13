@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Scene.h"
 
 // シーンマネージャー
@@ -34,4 +35,17 @@ public:
 private:
 	Scene* currentScene = nullptr;
 	Scene* nextScene = nullptr;
+
+#if _DEBUG
+	bool Sceneflg[6] = {};
+	std::string SceneName[6] =
+	{
+		"Sample",
+		"Title",
+		"Base",
+		"Shop",
+		"Dungeon",
+		"Battle"
+	};
+#endif
 };

@@ -150,6 +150,13 @@
     <ClCompile Include="External\imgui\imgui_demo.cpp" />
     <ClCompile Include="External\imgui\imgui_draw.cpp" />
     <ClCompile Include="External\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Sauce\Character.cpp" />
+    <ClCompile Include="Sauce\Enemy.cpp" />
+    <ClCompile Include="Sauce\EnemyManager.cpp" />
+    <ClCompile Include="Sauce\Enemy_Golem.cpp" />
+    <ClCompile Include="Sauce\Enemy_Robot.cpp" />
+    <ClCompile Include="Sauce\Enemy_Slime.cpp" />
+    <ClCompile Include="Sauce\Enemy_Zombie.cpp" />
     <ClCompile Include="Sauce\Framework.cpp" />
     <ClCompile Include="Sauce\GamePad.cpp" />
     <ClCompile Include="Sauce\Graphic\Graphics.cpp" />
@@ -163,6 +170,7 @@
     <ClCompile Include="Sauce\Logger.cpp" />
     <ClCompile Include="Sauce\Mian.cpp" />
     <ClCompile Include="Sauce\Mouse.cpp" />
+    <ClCompile Include="Sauce\Player.cpp" />
     <ClCompile Include="Sauce\Scene_Battle.cpp" />
     <ClCompile Include="Sauce\Scene_Dungeon.cpp" />
     <ClCompile Include="Sauce\Scene_Loading.cpp" />
@@ -181,6 +189,13 @@
     <ClInclude Include="External\imgui\imstb_rectpack.h" />
     <ClInclude Include="External\imgui\imstb_textedit.h" />
     <ClInclude Include="External\imgui\imstb_truetype.h" />
+    <ClInclude Include="Sauce\Character.h" />
+    <ClInclude Include="Sauce\Enemy.h" />
+    <ClInclude Include="Sauce\EnemyManager.h" />
+    <ClInclude Include="Sauce\Enemy_Golem.h" />
+    <ClInclude Include="Sauce\Enemy_Robot.h" />
+    <ClInclude Include="Sauce\Enemy_Slime.h" />
+    <ClInclude Include="Sauce\Enemy_Zombie.h" />
     <ClInclude Include="Sauce\Framework.h" />
     <ClInclude Include="Sauce\GamePad.h" />
     <ClInclude Include="Sauce\Graphic\Graphics.h" />
@@ -197,6 +212,7 @@
     <ClInclude Include="Sauce\Logger.h" />
     <ClInclude Include="Sauce\Misc.h" />
     <ClInclude Include="Sauce\Mouse.h" />
+    <ClInclude Include="Sauce\Player.h" />
     <ClInclude Include="Sauce\Scene.h" />
     <ClInclude Include="Sauce\Scene_Battle.h" />
     <ClInclude Include="Sauce\Scene_Dungeon.h" />

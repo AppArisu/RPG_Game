@@ -60,6 +60,11 @@ void SceneManager::Clear()
 void SceneManager::ChangeScene(Scene* scene)
 {
 	nextScene = scene;
+
+	for (int i = 0; i < 6; i++)
+	{
+		Sceneflg[i] = false;
+	}
 }
 
 // ImGUI‚É‚æ‚éƒV[ƒ“Ø‚è‘Ö‚¦
@@ -70,27 +75,38 @@ void SceneManager::imGuiSceneChanger()
 	if (ImGui::Button("Sample"))
 	{
 		ChangeScene(new SceneLoading(new SceneSample));
+		Sceneflg[0] = true;
 	}
 	if (ImGui::Button("Title"))
 	{
 		ChangeScene(new SceneLoading(new SceneTitle));
+		Sceneflg[1] = true;
 	}
 	if (ImGui::Button("Base"))
 	{
 		ChangeScene(new SceneLoading(new SceneBase));
+		Sceneflg[2] = true;
 	}
 	if (ImGui::Button("Shop"))
 	{
 		ChangeScene(new SceneLoading(new SceneShop));
+		Sceneflg[3] = true;
 	}
 	if (ImGui::Button("Dungeon"))
 	{
 		ChangeScene(new SceneLoading(new SceneDungeon));
+		Sceneflg[4] = true;
 	}
 	if (ImGui::Button("Battle"))
 	{
 		ChangeScene(new SceneLoading(new SceneBattle));
+		Sceneflg[5] = true;
 	}
+	for (int i = 0; i < 6; i++)
+	{
+		ImGui::Checkbox(SceneName[i].c_str(), &Sceneflg[i]);
+	}
+
 	ImGui::End();
 #endif
 }

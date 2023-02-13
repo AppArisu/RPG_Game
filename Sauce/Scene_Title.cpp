@@ -83,6 +83,8 @@ void SceneTitle::Render()
 
         spShader->End(rc);
     }
+
+    RenderImGui();
 }
 
 // ImGui•`‰æˆ—

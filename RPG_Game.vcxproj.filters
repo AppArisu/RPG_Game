@@ -55,6 +55,12 @@
     <Filter Include="Sauce\UI">
       <UniqueIdentifier>{a42814a5-5652-47ac-b835-3b6afcc1eedc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sauce\Game\Character\Player">
+      <UniqueIdentifier>{e23bad38-ae2e-4866-88d3-e244495d074d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Game\Character\Enemy">
+      <UniqueIdentifier>{0aa56ab4-5321-49d8-947d-575920af9b7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sauce\Mian.cpp">
@@ -137,6 +143,30 @@
     </ClCompile>
     <ClCompile Include="Sauce\UI_Pause.cpp">
       <Filter>Sauce\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Character.cpp">
+      <Filter>Sauce\Game\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Player.cpp">
+      <Filter>Sauce\Game\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Enemy.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\EnemyManager.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Enemy_Slime.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Enemy_Robot.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Enemy_Zombie.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Enemy_Golem.cpp">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +271,30 @@
     </ClInclude>
     <ClInclude Include="Sauce\UI_Pause.h">
       <Filter>Sauce\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Character.h">
+      <Filter>Sauce\Game\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Player.h">
+      <Filter>Sauce\Game\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Enemy.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\EnemyManager.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Enemy_Slime.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Enemy_Robot.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Enemy_Zombie.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Enemy_Golem.h">
+      <Filter>Sauce\Game\Character\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

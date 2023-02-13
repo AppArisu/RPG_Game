@@ -1,5 +1,7 @@
 #pragma once
 #include "Scene.h"
+#include "Player.h"
+#include "UI_Pause.h"
 
 class SceneShop :public Scene
 {
@@ -21,4 +23,10 @@ public:
 
 private:
     bool SceneChangeflg = false;
+
+    // ƒvƒŒƒCƒ„[
+    std::unique_ptr<Player> player = nullptr;
+
+    // UI
+    std::unique_ptr<UIPause> pause = nullptr;
 };

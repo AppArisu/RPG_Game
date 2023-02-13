@@ -1,10 +1,11 @@
 #pragma once
 #include<memory>
+#include"Scene.h"
 
 class UI
 {
 public:
-    UI() {}
+    UI(Scene* scene) :uiScene(scene), mState(Active) {}
     virtual ~UI() {}
 
     virtual void Update() {}
@@ -23,6 +24,7 @@ public:
 protected:
     void Closed() { mState = Closing; }
 
-private:
+protected:
+    Scene* uiScene = nullptr;
     UIState mState = Closing;
 };

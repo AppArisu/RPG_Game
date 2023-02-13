@@ -2,9 +2,9 @@
 #include "Input.h"
 
 UIPause::UIPause(Scene* scene)
-    :uiScene(scene)
+    :UI(scene)
 {
-    sprite = std::make_unique<Sprite>("Data/Sprite/Texture/Fade.png");
+    sprite = std::make_unique<Sprite>("Data/Sprite/Shader/Black.png");
     uiScene->SetGameState(GameState::Paused);
 }
 
