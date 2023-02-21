@@ -8,6 +8,8 @@ EnemyGolem::EnemyGolem()
     EnemyGolem::SetAttack(Pram().Attack);
     EnemyGolem::SetDefense(Pram().Defense);
     EnemyGolem::SetSpeed(Pram().Speed);
+
+    sGolem = std::make_unique<Sprite>("Data/Sprite/Character/Human01.png");
 }
 
 void EnemyGolem::Update(float elapsedTime)
@@ -28,7 +30,7 @@ void EnemyGolem::Render()
 void EnemyGolem::RenderImGui()
 {
 #if _DEBUG
-    ImGui::Begin("Enemy");
+    ImGui::Begin("Character");
     if (ImGui::TreeNode("Golem"))
     {
         int pram[] =

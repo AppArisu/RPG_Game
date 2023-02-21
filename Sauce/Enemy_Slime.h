@@ -1,5 +1,7 @@
 #pragma once
+#include<memory>
 #include "Enemy.h"
+#include "Graphic/Sprite.h"
 
 class EnemySlime :public Enemy
 {
@@ -29,5 +31,5 @@ private:
     };
 
 private:
-
+    std::unique_ptr<Sprite> sSlime = nullptr;
 };

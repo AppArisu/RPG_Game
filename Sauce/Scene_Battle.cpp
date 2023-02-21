@@ -2,6 +2,7 @@
 #include "Scene_Manager.h"
 #include "Scene_Loading.h"
 #include "Scene_Base.h"
+#include "EnemyManager.h"
 
 SceneBattle::SceneBattle()
 {
@@ -11,10 +12,17 @@ void SceneBattle::Initialize()
 {
     // プレイヤー
     player = std::make_unique<Player>();
+
+    // エネミー
+    CallEnemy(slime, Slime);
+    CallEnemy(robot, Robot);
+    CallEnemy(zombie, Zombie);
+    CallEnemy(golem, Golem);
 }
 
 void SceneBattle::Finalize()
 {
+    EnemyManager::Instance().Clear();
 }
 
 void SceneBattle::Update(float elapsedTime)
@@ -79,10 +87,37 @@ void SceneBattle::RenderImGui()
 {
 #if _DEBUG
     player->RenderImGui();
+
+    slime->RenderImGui();
+    zombie->RenderImGui();
+    robot->RenderImGui();
+    golem->RenderImGui();
 #endif
 }
 
 void SceneBattle::Change(Scene* nextscene)
 {
     SceneManager::Instance().ChangeScene(new SceneLoading(nextscene));
+}
+
+void SceneBattle::CallEnemy(Enemy* enemy, EnemyID id)
+{
+    EnemyManager& enemyManager = EnemyManager::Instance();
+
+    switch (id)
+    {
+    case SceneBattle::Slime:
+        slime = new EnemySlime;
+        break;
+    case SceneBattle::Robot:
+        robot = new EnemyRobot;
+        break;
+    case SceneBattle::Zombie:
+        zombie = new EnemyZombie;
+        break;
+    case SceneBattle::Golem:
+        golem = new EnemyGolem;
+        break;
+    }
+    enemyManager.Register(enemy);
 }

@@ -11,6 +11,12 @@ void SceneShop::Initialize()
 {
     // プレイヤー
     player = std::make_unique<Player>();
+
+    // ショップ
+    weapon = std::make_unique<ShopWeapon>();
+    armor = std::make_unique<ShopArmor>();
+    medicine = std::make_unique<ShopMedicine>();
+    tool = std::make_unique<ShopTool>();
 }
 
 void SceneShop::Finalize()
@@ -71,6 +77,10 @@ void SceneShop::Render()
     if (GetGameState() == GameState::Paused)
     {
         pause->Render();
+        weapon->Render();
+        armor->Render();
+        medicine->Render();
+        tool->Render();
         RenderImGui();
     }
 }

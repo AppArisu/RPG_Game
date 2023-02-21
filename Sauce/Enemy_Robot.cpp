@@ -8,6 +8,8 @@ EnemyRobot::EnemyRobot()
     EnemyRobot::SetAttack(Pram().Attack);
     EnemyRobot::SetDefense(Pram().Defense);
     EnemyRobot::SetSpeed(Pram().Speed);
+
+    sRobot = std::make_unique<Sprite>("Data/Sprite/Character/Human02.png");
 }
 
 void EnemyRobot::Update(float elapsedTime)
@@ -28,7 +30,7 @@ void EnemyRobot::Render()
 void EnemyRobot::RenderImGui()
 {
 #if _DEBUG
-    ImGui::Begin("Enemy");
+    ImGui::Begin("Character");
     if (ImGui::TreeNode("Robot"))
     {
         int pram[] =

@@ -151,6 +151,7 @@
     <ClCompile Include="External\imgui\imgui_draw.cpp" />
     <ClCompile Include="External\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Sauce\Character.cpp" />
+    <ClCompile Include="Sauce\DungeonMap.cpp" />
     <ClCompile Include="Sauce\Enemy.cpp" />
     <ClCompile Include="Sauce\EnemyManager.cpp" />
     <ClCompile Include="Sauce\Enemy_Golem.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="Sauce\Graphic\Sprite.cpp" />
     <ClCompile Include="Sauce\Graphic\Texture.cpp" />
     <ClCompile Include="Sauce\Input.cpp" />
+    <ClCompile Include="Sauce\Item.cpp" />
     <ClCompile Include="Sauce\Logger.cpp" />
     <ClCompile Include="Sauce\Mian.cpp" />
     <ClCompile Include="Sauce\Mouse.cpp" />
@@ -179,6 +181,10 @@
     <ClCompile Include="Sauce\Scene_Sample.cpp" />
     <ClCompile Include="Sauce\Scene_Shop.cpp" />
     <ClCompile Include="Sauce\Scene_Title.cpp" />
+    <ClCompile Include="Sauce\Shop_Armor.cpp" />
+    <ClCompile Include="Sauce\Shop_Medicine.cpp" />
+    <ClCompile Include="Sauce\Shop_Tool.cpp" />
+    <ClCompile Include="Sauce\Shop_Weapon.cpp" />
     <ClCompile Include="Sauce\UI_Pause.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +196,7 @@
     <ClInclude Include="External\imgui\imstb_textedit.h" />
     <ClInclude Include="External\imgui\imstb_truetype.h" />
     <ClInclude Include="Sauce\Character.h" />
+    <ClInclude Include="Sauce\DungeonMap.h" />
     <ClInclude Include="Sauce\Enemy.h" />
     <ClInclude Include="Sauce\EnemyManager.h" />
     <ClInclude Include="Sauce\Enemy_Golem.h" />
@@ -209,6 +216,11 @@
     <ClInclude Include="Sauce\Graphic\Texture.h" />
     <ClInclude Include="Sauce\HighResolutionTimer.h" />
     <ClInclude Include="Sauce\Input.h" />
+    <ClInclude Include="Sauce\Item.h" />
+    <ClInclude Include="Sauce\Item_Armor.h" />
+    <ClInclude Include="Sauce\Item_Medicine.h" />
+    <ClInclude Include="Sauce\item_Tool.h" />
+    <ClInclude Include="Sauce\Item_Weapon.h" />
     <ClInclude Include="Sauce\Logger.h" />
     <ClInclude Include="Sauce\Misc.h" />
     <ClInclude Include="Sauce\Mouse.h" />
@@ -222,6 +234,11 @@
     <ClInclude Include="Sauce\Scene_Sample.h" />
     <ClInclude Include="Sauce\Scene_Shop.h" />
     <ClInclude Include="Sauce\Scene_Title.h" />
+    <ClInclude Include="Sauce\Shop.h" />
+    <ClInclude Include="Sauce\Shop_Armor.h" />
+    <ClInclude Include="Sauce\Shop_Medicine.h" />
+    <ClInclude Include="Sauce\Shop_Tool.h" />
+    <ClInclude Include="Sauce\Shop_Weapon.h" />
     <ClInclude Include="Sauce\UI.h" />
     <ClInclude Include="Sauce\UI_Pause.h" />
   </ItemGroup>

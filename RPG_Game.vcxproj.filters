@@ -61,6 +61,12 @@
     <Filter Include="Sauce\Game\Character\Enemy">
       <UniqueIdentifier>{0aa56ab4-5321-49d8-947d-575920af9b7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sauce\Game\Itme">
+      <UniqueIdentifier>{068efbec-0118-4bb3-8e1b-bc876333f7a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sauce\Game\Shop">
+      <UniqueIdentifier>{5f179daf-5ac3-45ce-9d8b-7b803a2a2e3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sauce\Mian.cpp">
@@ -167,6 +173,24 @@
     </ClCompile>
     <ClCompile Include="Sauce\Enemy_Golem.cpp">
       <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Item.cpp">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Shop_Armor.cpp">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Shop_Medicine.cpp">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Shop_Tool.cpp">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\Shop_Weapon.cpp">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="Sauce\DungeonMap.cpp">
+      <Filter>Sauce\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +319,39 @@
     </ClInclude>
     <ClInclude Include="Sauce\Enemy_Golem.h">
       <Filter>Sauce\Game\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Item.h">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Item_Armor.h">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Item_Medicine.h">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\item_Tool.h">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Item_Weapon.h">
+      <Filter>Sauce\Game\Itme</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Shop.h">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Shop_Armor.h">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Shop_Medicine.h">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Shop_Tool.h">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\Shop_Weapon.h">
+      <Filter>Sauce\Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="Sauce\DungeonMap.h">
+      <Filter>Sauce\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,8 @@
 #pragma once
+#include<memory>
 #include "Character.h"
+#include "Graphic/Sprite.h"
+#include "Item.h"
 
 class Player :public Character
 {
@@ -40,4 +43,43 @@ private:
         int Defense = 20;
         int Speed = 10;
     };
+
+private:
+    std::unique_ptr<Sprite> sPlayer = nullptr;
+};
+
+class Inventory
+{
+public:
+    Inventory() {}
+    ~Inventory() {}
+
+    void Update() {}
+    void Render() {}
+    void RenderImGui() {}
+
+    // アイテム追加
+    void AddItem(Parameter itme)
+    {
+        if (itmes.size() < Capacity)
+        {
+            itmes.push_back(itme);
+        }
+    }
+    // アイテム削除
+    void RemoveItem(int index)
+    {
+        if (index >= 0 && index < itmes.size())
+        {
+            itmes.erase(itmes.begin() + index);
+        }
+    }
+    // アイテム取得
+    Parameter& GetItem(int index) { return itmes[index]; }
+    // アイテムの数を取得
+    int GetItemCount()const { return itmes.size(); }
+
+private:
+    std::vector<Parameter> itmes;
+    const int Capacity = 10;
 };

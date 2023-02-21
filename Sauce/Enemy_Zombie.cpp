@@ -8,6 +8,8 @@ EnemyZombie::EnemyZombie()
     EnemyZombie::SetAttack(Pram().Attack);
     EnemyZombie::SetDefense(Pram().Defense);
     EnemyZombie::SetSpeed(Pram().Speed);
+
+    sZombie = std::make_unique<Sprite>("Data/Sprite/Character/Human04.png");
 }
 
 void EnemyZombie::Update(float elapsedTime)
@@ -28,7 +30,7 @@ void EnemyZombie::Render()
 void EnemyZombie::RenderImGui()
 {
 #if _DEBUG
-    ImGui::Begin("Enemy");
+    ImGui::Begin("Character");
     if (ImGui::TreeNode("Zombie"))
     {
         int pram[] =

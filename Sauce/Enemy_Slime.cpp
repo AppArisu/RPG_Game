@@ -8,6 +8,8 @@ EnemySlime::EnemySlime()
     EnemySlime::SetAttack(Pram().Attack);
     EnemySlime::SetDefense(Pram().Defense);
     EnemySlime::SetSpeed(Pram().Speed);
+
+    sSlime = std::make_unique<Sprite>("Data/Sprite/Character/Human03.png");
 }
 
 void EnemySlime::Update(float elapsedTime)
@@ -28,7 +30,7 @@ void EnemySlime::Render()
 void EnemySlime::RenderImGui()
 {
 #if _DEBUG
-    ImGui::Begin("Enemy");
+    ImGui::Begin("Character");
     if (ImGui::TreeNode("Slime"))
     {
         int pram[] =
